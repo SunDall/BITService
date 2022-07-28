@@ -3,7 +3,7 @@
 
 `html`
 
-for visual abilities. This item was removed later and the main file got some improves because of uncompatibility.</p>
+for visual abilities. This item was removed later and the main file got some improves due to uncompatibility.</p>
 <h2 align="center">UA</h2>
 Вміст цієї папки - це попередні версії програми, що базувалися на
 
