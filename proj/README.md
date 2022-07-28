@@ -12,7 +12,6 @@ docker run -p 8081:8081 bitservice
 
 const fs = require("fs")
 let BTCrate = 0;
-//let exch = 0;
 
 function getBTC() {
   const axios = require('axios');
@@ -35,7 +34,6 @@ function add_email(email) {
   const readline = require('node:readline');
   const rl = readline.createInterface({
     input: process.stdin,
-    //output: process.stdout
   });
 
   let flag = -1;
