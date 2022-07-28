@@ -1,4 +1,5 @@
 ```cmd
+//NEEDED NODE MODULES FOR THE PROJECT
 npm install axios
 npm install nodemailer --save
 
