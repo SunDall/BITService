@@ -1,0 +1,13 @@
+{
+  "name": "bitservice",
+  "version": "1.0.0",
+  "description": "Getting the value of Bitcoin in Hrivnas",
+  "main": "server.js",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "nodemailer": "^6.7.7"
+  }
+}

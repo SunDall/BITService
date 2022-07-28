@@ -1,0 +1,4 @@
+stas@stas 
+any@thing 
+not_stas@stas 
+abc@example.com 
