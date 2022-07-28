@@ -1,4 +1,6 @@
 # BITService
+
+`JavaScript`
 <h2 align = "center"> ENG </h2>
 <h4>BITService</h4><p>is the project which is considered in converting Bitcoins (BTC) to Hrivnas (UAH). This information can be spread to the email which can be mentioned in this application.</p>
 <h3>Detals about the project is in <a href = "https://github.com/SunDall/BITService/tree/main/proj"><b>proj</b> folder</h3></a>
