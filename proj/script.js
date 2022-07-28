@@ -56,13 +56,13 @@ function add_email(email) {
 
     function adding(){
       if (flag == -1) {
-        console.log('лист надіслано');
+        console.log('email внесено');
         fs.appendFile('db.txt', `${email} \n`, function(err, result) {
           if(err) console.log('error', err);
         });
       }
       else{
-        console.log('лист повернено');
+        console.log('email повернено');
       }
     }
 
