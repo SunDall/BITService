@@ -5,10 +5,10 @@
 npm install axios
 npm install nodemailer --save
 
-FOR DOCKERFILE
-              1
+//FOR DOCKERFILE
+//              1
 docker build . -t bitservice
-              2
+//              2
 docker run -p 8081:8081 bitservice
 ```
 ```js
