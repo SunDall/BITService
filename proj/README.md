@@ -1,5 +1,4 @@
 <h2>Розробка проекту</h2>
-<p></p>
 <p>Застосовувалися такі основні команди:</p>
 ```powershell
 //NEEDED NODE MODULES FOR THE PROJECT
