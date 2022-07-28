@@ -1,5 +1,6 @@
 <h2>Розробка проекту</h2>
 <p>Застосовувалися такі основні команди:</p>
+
 ```powershell
 //NEEDED NODE MODULES FOR THE PROJECT
 npm install axios
