@@ -1,0 +1,121 @@
+//npm install axios
+//npm install node-mandrill
+
+let BTCrate = 0;
+//let val = 0;
+//let exch = 0;
+
+function getBTC() {
+  const axios = require('axios');
+  axios.get('https://api.binance.com/api/v3/ticker/price?symbol=BTCUAH')
+    .then(response => {
+      console.log(response.data.symbol);
+      console.log(response.data.price);
+      if (BTCrate != response.data.price && BTCrate != 0) {
+        inform(); 
+        //val = ((response.data.price / BTCrate) * 100 - 100).toFixed(3);
+        console.log(((response.data.price / BTCrate) * 100 - 100).toFixed(3) + "% у порівнянні з попереднім значенням");
+      };
+    BTCrate = response.data.price;
+  });
+
+  setTimeout(getBTC, 60000);
+}
+
+function add_email(email) {
+  const readline = require('node:readline');
+  const rl = readline.createInterface({
+    input: process.stdin,
+    //output: process.stdout
+  });
+  const fs = require("fs")
+  const nel = process.platform === '\n';
+
+  rl.question("Input e-mail:", function(email){
+    console.log(email);
+    if (email.indexOf('@') > -1) {
+      console.log('entered');
+      fs.appendFile('db.txt', `${email} \n`, function(err, result) {
+        if(err) console.log('error', err);
+      });
+    }
+  });
+  setTimeout(add_email, 5000);
+}
+
+
+
+function inform() {
+/*
+  var lineReader = require('readline').createInterface({
+    input: require('fs').createReadStream('file.in')
+  });
+  
+  lineReader.on('line', function (line) {
+    console.log('Line from file:', line);
+  });
+
+*/
+/*
+const mandrill = require('node-mandrill')('<your API Key>'); 
+
+function sendEmail ( _name = 'somebody', _email = 'knngyfhfhmdyfjqpey@nthrl.com', _subject = 'BTC rate', _message = `${BTCrate} is a value of Bitcoin now! It changed on ${val} %`) {
+    mandrill('/messages/send', {
+        message: {
+            to: [{email: _email , name: _name}],
+            from_email: 'noreply@yourdomain.com',
+            subject: _subject,
+            text: _message
+        }
+    }, function(error, response){
+        if (error) console.log( error );
+        else console.log(response);
+    });
+}
+app.post( '/api/sendemail/', function(req, res){
+            
+    let _name = req.body.name;
+    let _email = req.body.email;
+    let _subject = req.body.subject;
+    let _messsage = req.body.message;
+
+    //implement your spam protection or checks. 
+
+    sendEmail ( _name, _email, _subject, _message );
+
+});
+*/
+
+/*
+function sendMail() {
+    $.ajax({
+      type: 'POST',
+      url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+      data: {
+        'key': 'YOUR API KEY HERE',
+        'message': {
+          'from_email': 'YOUR@EMAIL.HERE',
+          'to': [
+              {
+                'email': 'RECIPIENT@EMAIL.HERE',
+                'name': 'RECIPIENT NAME (OPTIONAL)',
+                'type': 'to'
+              }
+            ],
+          'autotext': 'true',
+          'subject': 'YOUR SUBJECT HERE!',
+          'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+        }
+      }
+     }).done(function(response) {
+       console.log(response); // if you're into that sorta thing
+     });
+}
+*/
+
+
+
+
+}
+getBTC();
+add_email();

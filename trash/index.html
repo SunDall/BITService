@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>BITService</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+
+<body style="font-family: sans-serif;">
+	<h2>Поточний курс BTC до UAH</h2>
+	<h3>Біткоїн у гривнях</h3>
+	<h1 id = "value"></h1>
+	<h4 id="proc">0%</h4>
+	<h4>у порівнянні із попереднім значенням</h4>
+	<input id ="email" type="text" name="email">
+	<button name="enter_email" onclick="add_email()">Додати e-mail</button>
+	<script type="text/javascript" src="script.js"></script>
+	<!-- <script type="text/javascript" src="add_email.js"></script> -->
+	<p>інформацію взято з https://api.binance.com/api/v3/ticker/price?symbol=BTCUAH</p>
+</body>
+</html>
